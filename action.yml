@@ -1,0 +1,22 @@
+name: "Azure File Share Upload"
+author: "Craig Haseler <cahaseler@gmail.com>"
+description: "Uploads folders to Azure File Share"
+branding:
+  icon: "arrow-up"
+  color: "green"
+inputs:
+  account_name:
+    description: "The storage account name"
+    required: true
+  account_key:
+    description: "The storage account key. Make sure to treat this as a secret"
+    required: true
+  share_name:
+    description: "The name of the fileshare you are uploading to"
+    required: true
+  source_dir:
+    description: "The name of the directory in your Github you want to replace the contents of the fileshare with. Defaults to the whole repository."
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
