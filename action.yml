@@ -15,8 +15,8 @@ inputs:
     description: "The name of the fileshare you are uploading to"
     required: true
   source_dir:
-    description: "The name of the directory in your Github you want to replace the contents of the fileshare with. Defaults to the whole repository."
-    required: false
+    description: "The name of the directory in your Github you want to replace the contents of the fileshare with."
+    required: true
 runs:
   using: "docker"
   image: "Dockerfile"
