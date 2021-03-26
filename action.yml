@@ -17,6 +17,9 @@ inputs:
   source_dir:
     description: "The name of the directory in your Github you want to replace the contents of the fileshare with."
     required: true
+  cloud:
+    description: "If not on the general cloud, use this to specify an alternate cloud such as AzureUSGovernment."
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"

@@ -25,4 +25,5 @@ jobs:
           account_key: ${{secrets.ACCOUNT_KEY}}
           share_name: azure-fileshare
           source_dir: config
+          cloud: AzureUSGovernment
 ```
