@@ -18,12 +18,12 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: cahaseler/azure-fileshare-upload@v1.0.0
+      - uses: AthleticNet/azure-fileshare-upload@v1.0.0
         with:
           account_name: storageaccount
           account_key: ${{secrets.ACCOUNT_KEY}}
           share_name: azure-fileshare
           source_dir: config
           cloud: AzureUSGovernment
+          extra_args: --destination-path sample-path
 ```

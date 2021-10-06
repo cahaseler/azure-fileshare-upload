@@ -1,5 +1,4 @@
-name: "Azure File Share Upload"
-author: "Craig Haseler <cahaseler@gmail.com>"
+name: "Azure File Share Upload2"
 description: "Uploads folders to Azure File Share"
 branding:
   icon: "arrow-up"
@@ -19,6 +18,9 @@ inputs:
     required: true
   cloud:
     description: "If not on the general cloud, use this to specify an alternate cloud such as AzureUSGovernment."
+    required: false
+  extra_args:
+    description: "Specify extra --parameters"
     required: false
 runs:
   using: "docker"

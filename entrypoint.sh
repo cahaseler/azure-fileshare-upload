@@ -27,4 +27,6 @@ if [ -n "$INPUT_CLOUD" ]; then
    az cloud set --name $INPUT_CLOUD
 fi
 
-az storage file upload-batch --account-name $INPUT_ACCOUNT_NAME --account-key $INPUT_ACCOUNT_KEY --destination $INPUT_SHARE_NAME  --source $INPUT_SOURCE_DIR
+EXTRA_ARGS=${INPUT_EXTRA_ARGS:""}
+
+az storage file upload-batch --account-name $INPUT_ACCOUNT_NAME --account-key $INPUT_ACCOUNT_KEY --destination $INPUT_SHARE_NAME  --source $INPUT_SOURCE_DIR $EXTRA_ARGS
